@@ -12,6 +12,7 @@ RUN adduser -G wheel -u 1000 cfallin
 RUN dnf -y install procps sudo passwd wget curl hostname
 RUN dnf -y install python ruby
 RUN dnf -y install mercurial git
+RUN dnf -y install glibc-langpack-en
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 EXPOSE 22
