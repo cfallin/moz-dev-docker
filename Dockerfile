@@ -20,6 +20,7 @@ RUN dnf -y install alsa-lib-devel dbus-glib-devel glibc-static gtk2-devel libstd
 RUN dnf -y install qemu-user-static
 RUN dnf -y copr enable lantw44/aarch64-linux-gnu-toolchain
 RUN dnf -y install aarch64-linux-gnu-*
+RUN dnf -y install ripgrep
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 EXPOSE 22
