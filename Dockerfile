@@ -17,6 +17,9 @@ RUN dnf -y install glibc-langpack-en
 RUN dnf -y install autoconf213 nodejs npm
 RUN dnf -y group install 'GNOME Software Development'
 RUN dnf -y install alsa-lib-devel dbus-glib-devel glibc-static gtk2-devel libstdc++-static libXt-devel nasm pulseaudio-libs-devel wireless-tools-devel yasm gcc-c++
+RUN dnf -y install qemu-user-static
+RUN dnf -y copr enable lantw44/aarch64-linux-gnu-toolchain
+RUN dnf -y install aarch64-linux-gnu-*
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 EXPOSE 22
